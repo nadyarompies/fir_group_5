@@ -175,9 +175,15 @@ print(tweets_df.groupby(['sentiment']).size())
 ```
 {% endcode %}
 
+The Result of the Sentiment Analysis
+
+![](<.gitbook/assets/Screen Shot 2022-03-17 at 11.43.39 PM.png>)
 
 
-![summarize](<.gitbook/assets/image (6).png>)
+
+![](<.gitbook/assets/Screen Shot 2022-03-18 at 1.11.05 AM.png>)
+
+
 
 ## Word Cloud
 

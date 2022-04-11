@@ -1,7 +1,3 @@
----
-description: FIR Group 5 Assignments
----
-
 # Sentiment Analysis Using Twitter API
 
 {% hint style="info" %}
@@ -54,7 +50,7 @@ api = tweepy.API(auth)
 ```
 {% endcode %}
 
-After we get the API key, we create a customizable input so we are able to put the keyword or hashtag and the number of tweets after we run the code.&#x20;
+After we get the API key, we create a customizable input so we are able to put the keyword or hashtag and the number of tweets after we run the code.
 
 We use the **“Tweepy”** which is an easy-to-use Python library for accessing the Twitter API and use api.search\_tweets. For the iteration of each tweets, we use the details such as below.
 
@@ -110,11 +106,13 @@ tweets_df.drop_duplicates(inplace = True)
 
 After we run the code, we should be able to put the keyword and number of tweets such as below.
 
-![Customizable Input](<.gitbook/assets/image (5).png>)
+The result of the 2000 #tesla in Twitter
+
+![Customizable input](<.gitbook/assets/image (4) (1).png>)
 
 The result of the 2000 #tesla in Twitter
 
-![Tesla in Twitter](<.gitbook/assets/image (2).png>)
+![Tesla in Twitter](<.gitbook/assets/image (2) (1).png>)
 
 ## Sentiment Analysis
 
@@ -153,9 +151,7 @@ tweets_df.head(10)
 
 Result of the Sentiment Analysis
 
-![Sentiment Analysis' Result](<.gitbook/assets/image (3).png>)
-
-
+![Sentiment Analysis' Result](<.gitbook/assets/image (3) (1).png>)
 
 {% code title="Summarize" %}
 ```
@@ -177,13 +173,9 @@ print(tweets_df.groupby(['sentiment']).size())
 
 The Result of the Sentiment Analysis
 
-![](<.gitbook/assets/Screen Shot 2022-03-17 at 11.43.39 PM.png>)
-
-
+![](<.gitbook/assets/image (6) (1).png>)
 
 ![](<.gitbook/assets/Screen Shot 2022-03-18 at 1.11.05 AM.png>)
-
-
 
 ## Word Cloud
 
@@ -220,11 +212,7 @@ for word in tweets_df['text']:
 output_text    
 ```
 
-
-
 ![](.gitbook/assets/image.png)
-
-
 
 ```
 text = ' '.join(output_text)
@@ -238,7 +226,4 @@ plt.imshow(wordcloud, interpolation="bilinear")
 plt.axis("off")
 ```
 
-
-
-![](<.gitbook/assets/image (1).png>)
-
+![](<.gitbook/assets/image (1) (1).png>)

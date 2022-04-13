@@ -40,7 +40,7 @@ test = data.DataReader(['TSLA'], 'yahoo', start='2021/01/01', end='2021/12/31')
 
 The output of retrieved stock prices.
 
-![Daily stock prices of Tesla](<.gitbook/assets/image (15).png>)
+![Daily stock prices of Tesla](<.gitbook/assets/image (16).png>)
 
 Save it to CSV file for further analysis
 

@@ -47,7 +47,7 @@ sort = desc
 
 ### Response from the server from Postman
 
-![JSON response](<.gitbook/assets/image (14).png>)
+![JSON response](<.gitbook/assets/image (15).png>)
 
 ### Reddit API using Python
 
@@ -80,7 +80,7 @@ size = 500
 q = str(input())
 ```
 
-![Input keyword](<.gitbook/assets/image (11).png>)
+![Input keyword](<.gitbook/assets/image (12).png>)
 
 #### Create a list to store Q1-Q4 submissions & comments API URLs
 
@@ -111,7 +111,7 @@ for i in range(len(urls_sms)):
 
 As it can be seen in the figure below, there are irrelevant JSON format data from the API that no need to be collected. Also, data in a list are still in JSON format. Hence, JSON load shall be performed next.
 
-![Output from a request](<.gitbook/assets/image (6).png>)
+![Output from a request](<.gitbook/assets/image (7).png>)
 
 #### Decode JSON format into a dictionary
 
@@ -171,7 +171,7 @@ df_cm_q4 = pd.DataFrame(dt_cm[3], columns=col_cm)
 
 #### Dataframe output
 
-![](<.gitbook/assets/image (8).png>)
+![](<.gitbook/assets/image (9).png>)
 
 ![](<.gitbook/assets/image (3).png>)
 
@@ -197,7 +197,7 @@ sia_comments = [[],[],[],[]]
 
 Example of words and scores from Lexicon
 
-![](<.gitbook/assets/image (12).png>)
+![](<.gitbook/assets/image (13).png>)
 
 #### Update lexicon
 
@@ -263,7 +263,7 @@ polarity\_scores function returns a dictionary of sentiment scores which contain
 
 Firstly, initialize the **"sentitext"** class with text arguments of the **"polarity\_scores"** function. Extract valence such as emoticon of input text and intensifier from BOOSTER\_DICT.&#x20;
 
-![Example of BOOSTER\_DICT elements](<.gitbook/assets/image (13).png>)
+![Example of BOOSTER\_DICT elements](<.gitbook/assets/image (14).png>)
 
 Then, append it to a **"sentiments"** list for **"sentiment\_valence"** function.
 
@@ -477,7 +477,7 @@ results_sms4_df.loc[results_sms2_df['compound'] <  lower_bound, 'label'] = -1
 
 #### Example of result dataframe&#x20;
 
-![](<.gitbook/assets/image (16).png>)
+![](<.gitbook/assets/image (17).png>)
 
 #### From this point, the score of data can be used for further analysis.&#x20;
 
@@ -603,7 +603,7 @@ for word in result_cm4_df['comment']:
 text = ' '.join(output_text)
 ```
 
-![text used to generate wordcloud](<.gitbook/assets/image (10).png>)
+![text used to generate wordcloud](<.gitbook/assets/image (11).png>)
 
 #### Plotting wordcloud
 
@@ -617,4 +617,4 @@ plt.axis("off")
 
 #### Wordcloud
 
-![](<.gitbook/assets/image (17).png>)
+![](<.gitbook/assets/image (18).png>)

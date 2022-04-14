@@ -617,4 +617,4 @@ plt.axis("off")
 
 #### Wordcloud
 
-![](<.gitbook/assets/image (18).png>)
+![](https://lh5.googleusercontent.com/bCoXp9bQGsa0Yda1W-8Kgd2L3c1NNykUiU4WRPJs3yHQVNSQX0onGT9QsZ1DKJIV1XKBvHsvJ2Iuqx-qDjriSpx2bsDQafl6q1gUKeW506TmV\_KJdQTaHSMcuWLKkS8\_DZdIAlvG)

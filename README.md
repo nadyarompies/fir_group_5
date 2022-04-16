@@ -2,13 +2,13 @@
 
 ## Sentiment Analysis Using Twitter API
 
-{% hint style="info" %}
+
 This document will explain how we use the Twitter API to get the data and use the data for Sentiment Analysis
-{% endhint %}
+
 
 ### Install and import the Library
 
-{% code title="Import Libraries" %}
+
 ```
 from textblob import TextBlob
 import sys
@@ -34,13 +34,13 @@ from nltk.stem import SnowballStemmer
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.feature_extraction.text import CountVectorizer
 ```
-{% endcode %}
+
 
 ### Get my API keys in Twitter
 
 To be able to use the API, we create the twitter developer account with elevated access and get the API key, API key secret, access token, and access token secret
 
-{% code title="My API key" %}
+
 ```
 consumerKey = "CDEyjgEQ3BGXLxN1fuwEgnoIQ"
 consumerSecret = "28qzXyKD2Ow2nfASDF5f3pDEEH4HYejPYHf45WrOrbt5cxE6SZ"
@@ -50,7 +50,7 @@ auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
 auth.set_access_token(accessToken, accessTokenSecret)
 api = tweepy.API(auth)
 ```
-{% endcode %}
+
 
 After we get the API key, we create a customizable input so we are able to put the keyword or hashtag and the number of tweets after we run the code.
 
@@ -66,11 +66,11 @@ We use the **“Tweepy”** which is an easy-to-use Python library for accessing
 | verified    | tweet.user.verified    |
 | description | tweet.user.description |
 
-{% hint style="info" %}
-from Twitter API, we know that the maximum timeframe of recent Tweets published in the past 7 days and 2900 tweets
-{% endhint %}
 
-{% code title="Using Twitter API" %}
+from Twitter API, we know that the maximum timeframe of recent Tweets published in the past 7 days and 2900 tweets
+
+
+
 ```
 #twitter API
 def percentage(part,whole):
@@ -104,7 +104,7 @@ tweets_df.head()
 #makesure no duplicates
 tweets_df.drop_duplicates(inplace = True)
 ```
-{% endcode %}
+
 
 After we run the code, we should be able to put the keyword and number of tweets such as below.
 
@@ -118,15 +118,15 @@ The result of the 2000 #tesla in Twitter
 
 ### Sentiment Analysis
 
-{% hint style="info" %}
+
 Sentiment analysis is one of the most popular use cases for NLP (Natural Language Processing)
-{% endhint %}
+
 
 In this part, we use Textblob to calculate **positive**, **negative**, **neutral**, **polarity** and **compound** parameters from the text.
 
 The polarity of a sentence refers to the amount of emotion included within it, whether it is positive, negative, or neutral. It is between -1 and 1. If the polarity is -1, the sentence is negative. If the polarity is +1, the sentence is positive. And if the polarity is 0, the statement is neutral. That is, it is neither positively nor negatively charged. Subjectivity was used to express ideas, perspectives, feelings, and emotions on social media platforms. Subjectivity refers to whether or not a sentence has emotion. Additionally, it is critical to determine whether the sentence is a fact (objective) or only an opinion (subjective). This is denoted by the 0 or 1 value. If the value is 0, it is objective; if it is 1, it is subjective.
 
-{% code title="Sentiment Analysis" %}
+
 ```
 tweets_df[["polarity", "subjectivity"]] = tweets_df["text"].apply(lambda Text: pd.Series(TextBlob(Text).sentiment))
 
@@ -151,13 +151,13 @@ for index, row in tweets_df["text"].iteritems():
 
 tweets_df.head(10)
 ```
-{% endcode %}
+
 
 Result of the Sentiment Analysis
 
 ![Sentiment Analysis' Result](<.gitbook/assets/image (3) (1).png>)
 
-{% code title="Summarize" %}
+
 ```
 #Number of Tweets (Total, Positive, Negative, Neutral)
 positive = 0
@@ -173,7 +173,7 @@ neutral = format(neutral, '.1f')
 print("total number: ",len(tweets_df))
 print(tweets_df.groupby(['sentiment']).size())
 ```
-{% endcode %}
+
 
 The Result of the Sentiment Analysis
 
